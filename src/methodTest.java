@@ -2,14 +2,14 @@ import java.util.Scanner;
 public class methodTest {
     public static void main(String[] args) {
         outer: while(true) {
-                    System.out.println("enter number 1");
+                    System.out.println("\t Enter number 1: ");
                     Scanner input = new Scanner(System.in);
                     double n1 = input.nextDouble();
-                    System.out.println("enter number 2");
+                    System.out.println("\t Enter number 2: ");
                     double n2 = input.nextDouble();
-                    System.out.println("enter number 3");
+                    System.out.println("\t Enter number 3: ");
                     double n3 = input.nextDouble();
-                    System.out.println("The smallest number is: \n " + getNumber(n1, n2, n3));
+                    System.out.println("\t The smallest number is:  " + getNumber(n1, n2, n3));
                     try {
                         Thread.sleep(1000);
                     }catch(InterruptedException e){System.out.println(e);}
