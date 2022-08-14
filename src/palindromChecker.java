@@ -19,15 +19,20 @@ public class palindromChecker {
         }
     }
     public static String palidromChecker(String palindromSample) {
-        //System.out.println("text is:" + palindromSample);
+        int a = 0;
         String palindromSampleLowercase = palindromSample.toLowerCase();
         int lastCharacter = palindromSampleLowercase.length() - 1;
-        //System.out.println("First character is: " + palindromSampleLowercase.charAt(0));
-        //System.out.println("Last character is: " + palindromSampleLowercase.charAt(lastCharacter));
-        if (palindromSampleLowercase.charAt(lastCharacter) == palindromSampleLowercase.charAt(0)) {
-            System.out.println("Result is true");
+        for (int i =0; i <= lastCharacter/2; i++) {
+            //System.out.println(palindromSampleLowercase.charAt(i));
+            //System.out.println(i);
+            if (palindromSampleLowercase.charAt(i) == palindromSampleLowercase.charAt(lastCharacter - i)) {
+             a++;
+            }
+        }
+        if (a >= lastCharacter/2) {
+            System.out.println("Palindrom is ok ");
         } else {
-            System.out.println("Result is false");
+            System.out.println("Palindrom is not ok !!!!");
         }
         return palindromSample;
     }
